@@ -1,19 +1,22 @@
 name: Deploy to Cloudflare (Release)
 on:
-  release:
-    types:
-      - released
-  pull_request:
+  push:
     branches:
       - main
-    paths:
-      - '.github/workflows/deploy-cloudflare.yaml'
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Release Tag'
-        required: true
-        default: 'v0.0.0'
+#   release:
+#     types:
+#       - released
+#   pull_request:
+#     branches:
+#       - main
+#     paths:
+#       - '.github/workflows/deploy-cloudflare.yaml'
+#   workflow_dispatch:
+#     inputs:
+#       tag:
+#         description: 'Release Tag'
+#         required: true
+#         default: 'v0.0.0'
 concurrency:
   group: cloudflare-worker-prod
   cancel-in-progress: false
