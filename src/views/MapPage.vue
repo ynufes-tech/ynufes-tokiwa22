@@ -1,7 +1,7 @@
-<script setup>
-import 'vue-inner-image-zoom/lib/vue-inner-image-zoom.css';
+<script setup lang="ts">
+import 'vue-inner-image-zoom/lib/styles.min.css';
 import InnerImageZoom from 'vue-inner-image-zoom';
-// import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle.vue";
+// import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle";
 import StarTitle from "@/components/StarTitle";
 import {event} from "vue-gtag";
 
