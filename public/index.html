@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ja-jp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-  <link rel="stylesheet" href="/logo-style.css">
+  <link rel="stylesheet" href="<%= BASE_URL %>logo-style.css">
   <title>【星彩】22常盤祭 - 横浜国立大学大学祭</title>
-  <meta property="og:url" content="https://tokiwa22.ynu-fes.yokohama/"/>
+  <meta property="og:url" content="https://ynu-fes.yokohama/22/tokiwa"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="【星彩】22常盤祭 - 横浜国立大学大学祭"/>
   <meta property="og:description" content="22常盤祭　横浜国立大学大学祭の公式HPです。"/>
   <meta property="og:site_name" content="【星彩】22常盤祭 - 横浜国立大学大学祭"/>
-  <meta content="https://tokiwa22.ynu-fes.yokohama/data/ogp_image.webp" property="og:image"/>
+  <meta content="https://ynu-fes.yokohama/22/tokiwa/data/ogp_image.webp" property="og:image"/>
   <meta content="summary" property="twitter:card"/>
   <meta content="@ynu_fes" property="twitter:site"/>
   <meta content="【星彩】22常盤祭 - 横浜国立大学大学祭" property="twitter:title"/>
-  <meta content="https://tokiwa22.ynu-fes.yokohama/data/ogp_image.webp" property="twitter:image"/>
+  <meta content="https://ynu-fes.yokohama/22/tokiwa/data/ogp_image.webp" property="twitter:image"/>
   <meta content="22常盤祭　横浜国立大学大学祭の公式HPです。" name="description"/>
-  <meta content="https://tokiwa22.ynu-fes.yokohama/data/ogp_image.webp" name="thumbnail"/>
+  <meta content="https://ynu-fes.yokohama/22/tokiwa/data/ogp_image.webp" name="thumbnail"/>
   <meta content="常盤祭,22常盤祭,大学祭,星彩,横浜国立大学,横国,YNU,文化祭,YNUFES" name="keyword"/>
   <!--Google Fontの使用を記載-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -172,14 +172,14 @@
   <div id="loader-logo-text">横浜国立大学<br>2022常盤祭</div>
 </div>
 <script>
-  const loader = document.getElementById('loader');
-  loader.addEventListener('animationend', (ev) => {
-    if (ev.animationName === 'outside-box-shadow') {
-      loader.classList.add('loader-end')
-    } else if (ev.animationName === 'loader-fade') {
-      loader.classList.add('loader-faded')
-    }
-  })
+    const loader = document.getElementById('loader');
+    loader.addEventListener('animationend', (ev) => {
+        if (ev.animationName === 'outside-box-shadow') {
+            loader.classList.add('loader-end')
+        } else if (ev.animationName === 'loader-fade') {
+            loader.classList.add('loader-faded')
+        }
+    })
 </script>
 <div id="app"></div>
 <!-- built files will be auto injected -->
