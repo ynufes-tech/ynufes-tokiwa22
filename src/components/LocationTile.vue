@@ -44,9 +44,9 @@ const setColor = computed(() => {
     <h2>{{ props.nameEN }}</h2>
     <h1>{{ props.nameJP }}</h1>
     <div class="facilities_icons">
-      <img v-if="props.icons.includes('restroom')" src="/icons/facilities/restroom.png" alt="トイレ">
-      <img v-if="props.icons.includes('trash')" src="/icons/facilities/trash-area.png" alt="ごみ捨て">
-      <img v-if="props.icons.includes('hq')" src="/icons/facilities/tokiwa-hq.png" alt="本部">
+      <img v-if="props.icons.includes('restroom')" src="@/assets/facilities/restroom.png" alt="トイレ">
+      <img v-if="props.icons.includes('trash')" src="@/assets/facilities/trash-area.png" alt="ごみ捨て">
+      <img v-if="props.icons.includes('hq')" src="@/assets/facilities/tokiwa-hq.png" alt="本部">
     </div>
     <div>
       <img class="map" :src="`/assets/maps/${props.map}`" :alt="`${props.nameJP}の地図`"/>

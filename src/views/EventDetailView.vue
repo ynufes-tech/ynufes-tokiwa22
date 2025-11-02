@@ -1,6 +1,7 @@
 <script setup>
 import data from "@/assets/events.json"
 import StarTitle from "@/components/StarTitle";
+import { publicPath } from "@/main";
 
 const props = defineProps({
   eventId: {
@@ -80,7 +81,7 @@ const showNoImage = function (e) {
       </div>
       <div class="event-detail-description">
         <div class="event-icon">
-          <img :src="`/data/icons/events/`+eventData.event_id+`.webp`" @error="showNoImage">
+          <img :src="`${publicPath}data/icons/events/`+eventData.event_id+`.webp`" @error="showNoImage">
         </div>
         <div class="event-description">
           <p class="allow-wrap" v-text="eventData.event_description"/>

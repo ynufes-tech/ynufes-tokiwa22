@@ -1,4 +1,6 @@
 <script setup>
+import { publicPath } from "@/main";
+
 const props = defineProps({
   eventData: {
     type: Object,
@@ -61,10 +63,10 @@ function getPlaceName(e) {
 
 <template>
   <div class="event_widget">
-    <img :src="`/data/icons/events/${eventData.event_id}.webp`" @error="showNoImage"/>
+    <img :src="`${publicPath}data/icons/events/${eventData.event_id}.webp`" @error="showNoImage"/>
     <div class="tag_area">
       <div class="event_genre" v-bind:class="`event_genre_${props.eventData.event_genre_id}`">
-        <img class="event_genre_icon" :src="`/data/icons/genre/${genreIcons[props.eventData.event_genre_id]}`"/>
+        <img class="event_genre_icon" :src="`${publicPath}data/icons/genre/${genreIcons[props.eventData.event_genre_id]}`"/>
         <span>{{ eventGenre[props.eventData.event_genre_id] }}</span>
       </div>
       <div>{{ getPlaceName(props.eventData) }}</div>

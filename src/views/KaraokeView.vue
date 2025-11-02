@@ -26,7 +26,6 @@
   </div>
   <div class="information award-goods">
     <h1>気になる豪華景品はこちら！</h1>
-    <img src="">
     <p>出演していただいた方にはもれなく全国で使えるビッグエコー室料50%OFFパスポートを贈呈します。</p>
   </div>
   <div class="information entry-flow">
