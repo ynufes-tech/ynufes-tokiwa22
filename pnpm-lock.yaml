@@ -48,6 +48,9 @@ importers:
       '@babel/eslint-parser':
         specifier: ^7.28.5
         version: 7.28.5(@babel/core@7.28.5)(eslint@7.32.0)
+      '@cloudflare/workers-types':
+        specifier: ^4.20251014.0
+        version: 4.20251014.0
       '@vue/cli-plugin-babel':
         specifier: ~5.0.9
         version: 5.0.9(@vue/cli-service@5.0.9(@vue/compiler-sfc@3.5.22)(encoding@0.1.13)(lodash@4.17.21)(prettier@3.6.2)(sass-loader@13.3.3(sass@1.93.3)(webpack@5.102.1))(vue@3.5.22)(webpack-sources@3.3.3))(core-js@3.46.0)(encoding@0.1.13)(vue@3.5.22)
@@ -623,6 +626,9 @@ packages:
   '@babel/types@7.28.5':
     resolution: {integrity: sha512-qQ5m48eI/MFLQ5PxQj4PFaprjyCTLI37ElWMmNs0K8Lk3dVeOdNpB3ks8jc7yM5CDmVC73eMVk/trk3fgmrUpA==}
     engines: {node: '>=6.9.0'}
+
+  '@cloudflare/workers-types@4.20251014.0':
+    resolution: {integrity: sha512-tEW98J/kOa0TdylIUOrLKRdwkUw0rvvYVlo+Ce0mqRH3c8kSoxLzUH9gfCvwLe0M89z1RkzFovSKAW2Nwtyn3w==}
 
   '@discoveryjs/json-ext@0.5.7':
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
@@ -4697,6 +4703,8 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
+
+  '@cloudflare/workers-types@4.20251014.0': {}
 
   '@discoveryjs/json-ext@0.5.7': {}
 
