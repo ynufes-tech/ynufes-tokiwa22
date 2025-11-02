@@ -15,5 +15,5 @@ if (process.env.NODE_ENV === "production") {
 }
 
 //暫定対応
-const publicPath = "/22/tokiwa/";
+const publicPath = "/";
 export { publicPath };

@@ -32,9 +32,8 @@ module.exports = defineConfig({
     }
   },
 
-  // Output directory for Cloudflare Pages
   outputDir: "dist",
 
   // Base URL - adjust if deploying to subdirectory
-  publicPath: "/22/tokiwa/",
+  publicPath: "/",
 });
