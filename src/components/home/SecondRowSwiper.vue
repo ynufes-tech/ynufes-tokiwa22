@@ -1,26 +1,27 @@
 <script setup>
-import {Swiper, SwiperSlide} from 'swiper/vue';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import SwiperCore, {Autoplay} from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/autoplay";
+import SwiperCore, { Autoplay } from "swiper";
+import { publicPath } from "@/main";
 
 SwiperCore.use([Autoplay]);
 </script>
 <template>
   <Swiper
-      :autoplay="{
-  delay: 6000,
-  disableOnInteraction: true,
-  }"
-      :spaceBetween="20"
-      :slidesPerView="'auto'"
-      class="home-second-swiper"
+    :autoplay="{
+      delay: 6000,
+      disableOnInteraction: true,
+    }"
+    :spaceBetween="20"
+    :slidesPerView="'auto'"
+    class="home-second-swiper"
   >
     <SwiperSlide>
       <router-link to="/poster" class="hover-to-shrink">
         <div class="poster">
           ポスター
-          <br>
+          <br />
           展覧会
         </div>
       </router-link>
@@ -28,22 +29,20 @@ SwiperCore.use([Autoplay]);
     <SwiperSlide>
       <router-link to="/sp/karaoke" class="hover-to-shrink">
         <div>
-          <img src="@/assets/karaoke_logo.png">
+          <img src="@/assets/karaoke_logo.png" />
         </div>
       </router-link>
     </SwiperSlide>
     <SwiperSlide>
       <router-link to="/sp/contest" class="hover-to-shrink">
         <div>
-          <img src="/data/icons/sp/contest.webp">
+          <img :src="`${publicPath}data/icons/sp/contest.webp`" />
         </div>
       </router-link>
     </SwiperSlide>
     <SwiperSlide>
       <router-link to="/sponsors" class="hover-to-shrink">
-        <div class="sponsor">
-          ご協賛<br>について
-        </div>
+        <div class="sponsor">ご協賛<br />について</div>
       </router-link>
     </SwiperSlide>
   </Swiper>

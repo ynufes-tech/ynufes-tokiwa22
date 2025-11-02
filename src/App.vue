@@ -1,42 +1,40 @@
 <script setup>
-import Background from "@/components/BackgroundComponent"
+import Background from "@/components/BackgroundComponent";
 import HeaderView from "@/components/HeaderView";
-import {useStore} from "vuex";
-import {onMounted} from "vue";
-import {createClient} from "microcms-js-sdk";
+// import {useStore} from "vuex";
+// import {onMounted} from "vue";
+// import {createClient} from "microcms-js-sdk";
 
 window.onload = function () {
-  const loader = document.getElementById('loader');
-  loader.classList.add('loaded');
-}
+  const loader = document.getElementById("loader");
+  loader.classList.add("loaded");
+};
 
-const store = useStore();
-
-const client = createClient({
-  serviceDomain: "tokiwa22",
-  apiKey: "7a49d7576cff4c6e978c2be8e60b789c8b0b",
-});
-
-function getLatestSponsors() {
-  client.get({
-    endpoint: 'banner',
-    queries: {limit: 20},
-  }).then((data) => {
-        store.commit('setSponsors', data.contents);
-      }
-  );
-}
-
-onMounted(() => {
-  getLatestSponsors();
-})
-
+// **Removing sponsor fetching on 2025/11/2**
+// const store = useStore();
+// const client = createClient({
+//   serviceDomain: "tokiwa22",
+//   apiKey: "7a49d7576cff4c6e978c2be8e60b789c8b0b",
+// });
+// function getLatestSponsors() {
+//   client.get({
+//     endpoint: 'banner',
+//     queries: {limit: 20},
+//   }).then((data) => {
+//         store.commit('setSponsors', data.contents);
+//       }
+//   );
+// }
+//
+// onMounted(() => {
+//   getLatestSponsors();
+// })
 </script>
 
 <template>
-  <HeaderView id="header"/>
-  <router-view class="router-view"/>
-  <Background id="bg"/>
+  <HeaderView id="header" />
+  <router-view class="router-view" />
+  <Background id="bg" />
   <!--  <FooterComponent/>-->
 </template>
 
@@ -48,7 +46,7 @@ body {
 #app {
   overflow: hidden;
   top: 0;
-  font-family: 'Klee One', cursive;
+  font-family: "Klee One", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -69,23 +67,22 @@ nav a.router-link-exact-active {
   color: #42b983;
 }
 
-
 .router-view {
   margin: 90px auto 0 auto;
   top: 0;
   z-index: 50;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #03061A;
+  background-color: #03061a;
   position: relative;
   z-index: -200;
 }
-
 
 #bg {
   position: fixed;
@@ -93,7 +90,6 @@ html, body {
   left: 0;
   z-index: -100;
 }
-
 
 #header {
   position: fixed;
@@ -126,5 +122,4 @@ html, body {
 .hover-to-shrink:hover > * {
   transform: scale(0.95);
 }
-
 </style>

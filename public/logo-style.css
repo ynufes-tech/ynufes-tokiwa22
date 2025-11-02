@@ -21,7 +21,7 @@ body {
 }
 
 #loader.loader-end.loaded {
-    animation: 0s ease-out forwards loader-fade .5s;
+    animation: loader-fade .5s ease-out forwards;
 }
 
 

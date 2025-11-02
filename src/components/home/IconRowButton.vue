@@ -1,4 +1,5 @@
 <script setup>
+import { publicPath } from "@/main";
 
 const props = defineProps({
   iconPath: {
@@ -8,13 +9,13 @@ const props = defineProps({
   title: {
     type: String,
     required: true,
-    default: '未指定'
-  }
-})
+    default: "未指定",
+  },
+});
 </script>
 <template>
   <div class="home-button">
-    <img class="icon" :src="props.iconPath">
+    <img class="icon" :src="publicPath + props.iconPath" />
     <div class="button-title" v-html="props.title"></div>
   </div>
 </template>
@@ -48,7 +49,7 @@ const props = defineProps({
     height: auto;
     width: 10em;
     flex-direction: column;
-    .icon{
+    .icon {
       width: 70%;
       height: auto;
     }
