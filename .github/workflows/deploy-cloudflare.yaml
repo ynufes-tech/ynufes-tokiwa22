@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cloudflare Worker Deploy (Nuxt)
+      - name: Cloudflare Worker Deploy (Vue.js)
         uses: ynufes-tech/reusable-actions/.github/actions/cf-worker-deploy@main
         with:
           worker_name: tokiwa22-release
