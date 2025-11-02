@@ -73,6 +73,11 @@ import { publicPath } from "@/main";
         justify-content: center;
         align-items: center;
         background: radial-gradient(#1e3272, #15084f);
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
     }
 
