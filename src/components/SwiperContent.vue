@@ -139,7 +139,7 @@ export default {
     gap: 0.2rem;
 
     > div {
-      font-size: unquote("max(0.6rem, 0.9em)");
+      font-size: max(0.6rem, 0.9em);
       color: white;
       padding: 0.05rem 0.1rem;
       border-radius: 0.4rem;

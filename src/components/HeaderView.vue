@@ -123,7 +123,7 @@ header {
   z-index: 100;
   transition: all 0.5s 0s ease-in-out;
   padding: 85px 20px;
-  width: unquote("min(250px, 80vw)");
+  width: min(250px, 80vw);
   height: 100vh;
   display: flex;
   flex-wrap: nowrap;
