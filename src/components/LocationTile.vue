@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // eslint-disable-next-line no-unused-vars
 import {computed} from "vue";
 

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps({
   date: {
     type: String,
@@ -45,7 +45,7 @@ switch (props.date_color) {
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "DateBlock"
 }

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {event} from "vue-gtag";
 import StarTitle from "@/components/StarTitle.vue";
 if (process.env.NODE_ENV === "production") {

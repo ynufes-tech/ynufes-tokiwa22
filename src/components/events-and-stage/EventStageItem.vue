@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import DateBlock from "@/components/events-and-stage/DateBlock";
 
 const props = defineProps({

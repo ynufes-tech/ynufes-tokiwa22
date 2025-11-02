@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import 'vue-inner-image-zoom/lib/styles.min.css';
 // import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle.vue";
 import StarTitle from "@/components/StarTitle";

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import TopTitleBar from "@/components/home/TopTitleBar";
 import HomeSearchSection from "@/components/home/HomeSearchSection";
 import IconRowButton from "@/components/home/IconRowButton";
