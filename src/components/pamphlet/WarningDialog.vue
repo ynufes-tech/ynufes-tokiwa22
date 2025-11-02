@@ -1,6 +1,11 @@
 <template>
   <teleport to="body">
-    <div class="dialog" id="warning-dialog" v-show="isVisible" @click="close"></div>
+    <div
+      class="dialog"
+      id="warning-dialog"
+      v-show="isVisible"
+      @click="close"
+    ></div>
     <div class="dialog-content" v-show="isVisible">
       <h2>パンフレット(高解像度版)をダウンロードしますか?</h2>
       <div>
@@ -9,14 +14,21 @@
       </div>
       <div class="selection-button-row">
         <div @click="close">戻る</div>
-        <a class="download-button" download="22常盤祭パンフレット(高解像度).pdf" href="https://storage.googleapis.com/ynu-fes-tokiwa22.appspot.com/22tokiwa-pamphlet-web-high.pdf" target="_blank" @click="close">ダウンロード(34.5MB)</a>
+        <a
+          class="download-button"
+          download="22常盤祭パンフレット(高解像度).pdf"
+          href="https://assets.tokiwa22.ynu-fes.yokohama/22tokiwa-pamphlet-web-high.pdf"
+          target="_blank"
+          @click="close"
+          >ダウンロード(34.5MB)</a
+        >
       </div>
     </div>
   </teleport>
 </template>
 
 <script>
-import {event} from "vue-gtag";
+import { event } from "vue-gtag";
 
 export default {
   props: {
@@ -24,21 +36,21 @@ export default {
       required: true,
       type: Boolean,
       default: false,
-    }
+    },
   },
   data() {
-    return {}
+    return {};
   },
   methods: {
     close() {
-      event('pamphlet-download')
-      this.$emit('close')
-    }
-  }
-}
+      event("pamphlet-download");
+      this.$emit("close");
+    },
+  },
+};
 </script>
 
-<style scoped lang='sass'>
+<style scoped lang="sass">
 .dialog
   position: fixed
   top: 0
@@ -82,5 +94,4 @@ export default {
     background: #171749
     color: white
     text-decoration: none
-
 </style>
