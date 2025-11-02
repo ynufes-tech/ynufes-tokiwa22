@@ -1,14 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/autoplay";
-import SwiperCore, { Autoplay } from "swiper";
+import { Autoplay } from "swiper/modules";
 import { publicPath } from "@/main";
-
-SwiperCore.use([Autoplay]);
 </script>
 <template>
   <Swiper
+    :modules="[Autoplay]"
     :autoplay="{
       delay: 6000,
       disableOnInteraction: true,
