@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle.vue";
 import StarTitle from "@/components/StarTitle";
 import { ref } from "vue";

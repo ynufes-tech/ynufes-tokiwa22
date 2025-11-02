@@ -2,13 +2,13 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import VueGtag from "vue-gtag";
+import { createGtag } from "vue-gtag";
 
-if (process.env.NODE_ENV === "production") {
+if (import.meta.env.PROD) {
   createApp(App)
     .use(store)
     .use(router)
-    .use(VueGtag, { config: { id: "G-KWMEVYXEHM" } })
+    .use(createGtag({ config: { id: "G-KWMEVYXEHM" } }))
     .mount("#app");
 } else {
   createApp(App).use(store).use(router).mount("#app");

@@ -1,14 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/autoplay";
-import SwiperCore, { Autoplay } from "swiper";
+import { Autoplay } from "swiper/modules";
 import { publicPath } from "@/main";
-
-SwiperCore.use([Autoplay]);
 </script>
 <template>
   <Swiper
+    :modules="[Autoplay]"
     :autoplay="{
       delay: 6000,
       disableOnInteraction: true,
@@ -74,6 +73,11 @@ SwiperCore.use([Autoplay]);
         justify-content: center;
         align-items: center;
         background: radial-gradient(#1e3272, #15084f);
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
     }
 

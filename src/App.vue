@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Background from "@/components/BackgroundComponent";
 import HeaderView from "@/components/HeaderView";
 // import {useStore} from "vuex";

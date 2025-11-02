@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import data from "@/assets/events.json"
 import StarTitle from "@/components/StarTitle";
 import { publicPath } from "@/main";

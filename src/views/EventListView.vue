@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 
 import EventWidget from "@/components/EventWidget";
 import data from "@/assets/events.json";

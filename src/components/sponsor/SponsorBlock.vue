@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 // Import Swiper Vue.js components
 import {Swiper, SwiperSlide} from 'swiper/vue';
 import {event} from "vue-gtag";
@@ -6,9 +6,8 @@ import {event} from "vue-gtag";
 import 'swiper/css';
 import 'swiper/css/autoplay'
 
-import SwiperCore, {Autoplay} from 'swiper';
+import {Autoplay} from 'swiper/modules';
 import store from "@/store";
-SwiperCore.use([Autoplay]);
 const randomList = function (rand) {
   return rand.map(value => ({value, sort: Math.random()}))
       .sort((a, b) => a.sort - b.sort)
@@ -23,6 +22,7 @@ const access = async function (id) {
 </script>
 <template>
   <swiper v-show="store.state.sponsors.length!==0"
+          :modules="[Autoplay]"
           :autoplay="{
   delay: 6000,
   disableOnInteraction: true,

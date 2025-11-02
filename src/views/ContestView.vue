@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import UnderlinedSectionTitle from "@/components/utils/UnderlinedSectionTitle"
 
 fetch('https://infinite-bayou-57338.herokuapp.com/result.json', {

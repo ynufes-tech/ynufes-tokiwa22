@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import {event} from "vue-gtag";
 import StarTitle from "@/components/StarTitle.vue";
 if (process.env.NODE_ENV === "production") {
@@ -192,7 +192,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 .cell-holder {
-  width: unquote("min(100% - 1rem, 80rem)");
+  width: min(100% - 1rem, 80rem);
   justify-content: center;
   gap: 2em;
   display: flex;
@@ -206,7 +206,7 @@ if (process.env.NODE_ENV === "production") {
   border-radius: 2rem;
   aspect-ratio: 2;
   flex-shrink: 0;
-  width: unquote("min(100% - 1rem, 600px)");
+  width: min(100% - 1rem, 600px);
   background: white;
   position: relative;
   box-shadow: 0 19.2px 19.8px rgba(0, 0, 0, 0.092),

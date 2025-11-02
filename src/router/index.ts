@@ -1,11 +1,11 @@
-import {createRouter, createWebHistory} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import EventDetailView from '../views/EventDetailView'
-import EventListView from '../views/EventListView'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import HomeView from '@/views/HomeView'
+import EventDetailView from '@/views/EventDetailView'
+import EventListView from '@/views/EventListView'
 import UnderConstruction from "@/views/UnderConstruction";
 import NotFound from "@/views/NotFound"
 
-const routes = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "home",
@@ -21,7 +21,7 @@ const routes = [
     name: "EventDetailView",
     component: EventDetailView,
     props: (route) => {
-      return { ...route.params, eventId: parseInt(route.params.id) };
+      return { ...route.params, eventId: parseInt(route.params.id as string) };
     },
   },
   {
@@ -33,34 +33,34 @@ const routes = [
   {
     path: "/sp/karaoke",
     name: "",
-    component: () => import(/* webpackChunkName: "karaoke" */ '@/views/KaraokeView.vue'),
+    component: () => import(/* webpackChunkName: "karaoke" */ '@/views/KaraokeView'),
   },
   {
     path:'/sp/contest',
     name: '',
-    component: () => import(/* webpackChunkName: "contest" */ '@/views/ContestView.vue')
+    component: () => import(/* webpackChunkName: "contest" */ '@/views/ContestView')
   },
   {
     path: "/poster",
     name: "",
     // component: UnderConstruction
-    component: () => import(/* webpackChunkName: "poster-view" */ '@/views/PosterView.vue'),
+    component: () => import(/* webpackChunkName: "poster-view" */ '@/views/PosterView'),
   },
   {
     path: "/access",
     name: "AccessPage",
     // component: UnderConstruction,
-    component: () => import(/* webpackChunkName: "access-page" */ '@/views/AccessPage.vue'),
+    component: () => import(/* webpackChunkName: "access-page" */ '@/views/AccessPage'),
   },
   {
     path: "/reservation",
     name: "ReservationInfo",
-    component: () => import(/* webpackChunkName: "reservation-info" */ '@/views/ReservationInfo.vue'),
+    component: () => import(/* webpackChunkName: "reservation-info" */ '@/views/ReservationInfo'),
   },
   {
     path: "/map",
     name: "MapPage",
-    component: ()=> import(/* webpackChunkName: "reservation-info" */ '@/views/MapPage.vue'),
+    component: ()=> import(/* webpackChunkName: "reservation-info" */ '@/views/MapPage'),
   },
   {
     path: "/time-table",
@@ -71,22 +71,22 @@ const routes = [
     path: "/stages",
     name: "",
     // component: UnderConstruction,
-    component: () => import(/* webpackChunkName: "stages" */ '@/views/EventStages.vue'),
+    component: () => import(/* webpackChunkName: "stages" */ '@/views/EventStages'),
   },
   {
     path: "/pamphlet",
     name: "PamphletPage",
-    component: () => import(/* webpackChunkName: "pamphlet-page" */ '@/views/PamphletView.vue'),
+    component: () => import(/* webpackChunkName: "pamphlet-page" */ '@/views/PamphletView'),
   },
   {
     path: "/sponsors",
     name: "Sponsors",
-    component: () => import(/* webpackChunkName: "sponsor-page" */ '@/views/SponsorPage.vue'),
+    component: () => import(/* webpackChunkName: "sponsor-page" */ '@/views/SponsorPage'),
   },
   {
     path: "/others",
     name: "Others",
-    component: () => import(/* webpackChunkName: "others-page" */ '@/views/OthersView.vue'),
+    component: () => import(/* webpackChunkName: "others-page" */ '@/views/OthersView'),
     // component: Other
   },
   {path: '/404', component: NotFound},
@@ -94,7 +94,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

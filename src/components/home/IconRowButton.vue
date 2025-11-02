@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { publicPath } from "@/main";
 
 const props = defineProps({

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { publicPath } from "@/main";
 
 const props = defineProps({
@@ -121,7 +121,7 @@ function getPlaceName(e) {
 
     > div {
       vertical-align: middle;
-      font-size: unquote("max(0.6rem, 0.9em)");
+      font-size: max(0.6rem, 0.9em);
       color: white;
       padding: 0.1em 0.3em;
       border-radius: 0.4em;
