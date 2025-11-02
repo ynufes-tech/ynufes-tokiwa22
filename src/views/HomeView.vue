@@ -11,7 +11,8 @@ import SecondRowSwiper from "@/components/home/SecondRowSwiper";
 <template>
   <div class="home-wrapper">
     <TopTitleBar/>
-    <SponsorBlock class="sponsor-block"/>
+    <!--    Removing SponsorBlock on 2025/11/2-->
+    <!--    <SponsorBlock class="sponsor-block"/>-->
     <div class="home-row-1">
       <div class="menu-buttons">
         <router-link to="/reservation" class="hover-to-shrink">
