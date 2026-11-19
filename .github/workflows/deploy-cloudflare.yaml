@@ -33,6 +33,8 @@ jobs:
       - name: Cloudflare Worker Deploy (Vue.js)
         uses: ynufes-tech/reusable-actions/.github/actions/cf-worker-deploy@main
         with:
+          node_version: "24.22.3"
+          build_command: pnpm audit --prod --audit-level=low && pnpm build
           worker_name: tokiwa22-release
           wrangler_template: wrangler.template.toml
           release_tag: ${{ env.RELEASE_TAG }}
