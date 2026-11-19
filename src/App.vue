@@ -1,34 +1,11 @@
 <script setup lang="ts">
 import Background from "@/components/BackgroundComponent";
 import HeaderView from "@/components/HeaderView";
-// import {useStore} from "vuex";
-// import {onMounted} from "vue";
-// import {createClient} from "microcms-js-sdk";
-
 window.onload = function () {
   const loader = document.getElementById("loader");
   loader.classList.add("loaded");
 };
 
-// **Removing sponsor fetching on 2025/11/2**
-// const store = useStore();
-// const client = createClient({
-//   serviceDomain: "tokiwa22",
-//   apiKey: "7a49d7576cff4c6e978c2be8e60b789c8b0b",
-// });
-// function getLatestSponsors() {
-//   client.get({
-//     endpoint: 'banner',
-//     queries: {limit: 20},
-//   }).then((data) => {
-//         store.commit('setSponsors', data.contents);
-//       }
-//   );
-// }
-//
-// onMounted(() => {
-//   getLatestSponsors();
-// })
 </script>
 
 <template>
