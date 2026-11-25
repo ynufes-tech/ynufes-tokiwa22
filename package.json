@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "microcms-js-sdk": "^3.6.0",
-    "swiper": "^12.2.0",
+    "swiper": "^14.4.0",
     "vue": "^3.5.45",
     "vue-gtag": "^3.7.1",
     "vue-inner-image-zoom": "^3.0.3",
